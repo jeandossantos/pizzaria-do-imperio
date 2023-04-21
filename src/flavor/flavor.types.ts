@@ -1,4 +1,4 @@
-import { CreateFlavorDto } from './dtos/create-flavor.dto';
+import { CreateFlavorDto, UpdateFlavorDto } from './dtos/flavor.dto';
 
 export type CreateFlavorType = CreateFlavorDto;
-export type UpdateFlavorType = CreateFlavorDto;
+export type UpdateFlavorType = UpdateFlavorDto;

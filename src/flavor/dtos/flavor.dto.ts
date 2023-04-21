@@ -1,3 +1,4 @@
+import { OmitType } from '@nestjs/mapped-types';
 import {
   IsBoolean,
   IsNotEmpty,
@@ -11,15 +12,6 @@ export class CreateFlavorDto {
   @IsNotEmpty()
   @IsString()
   name: string;
-
-  @IsNumber()
-  @Min(0)
-  @Max(2)
-  size: number;
-
-  @IsNotEmpty()
-  @IsBoolean()
-  border: boolean;
 
   @IsNotEmpty()
   @IsNumber()
@@ -36,3 +28,5 @@ export class CreateFlavorDto {
   @IsNumber()
   priceBordered: number;
 }
+
+export class UpdateFlavorDto extends OmitType(CreateFlavorDto, [] as const) {}
